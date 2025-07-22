@@ -1,0 +1,67 @@
+{
+  "monte_carlo": {
+    "simulations": 100000,
+    "steps": 252,
+    "use_antithetic": true,
+    "random_seed": 42,
+    "variance_reduction": true
+  },
+  "numerical": {
+    "tolerance": 1e-6,
+    "max_iterations": 1000,
+    "use_high_precision": false
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "exotic_options.log",
+    "console": true,
+    "file_output": true,
+    "max_files": 5,
+    "max_file_size_mb": 10
+  },
+  "performance": {
+    "enable_logging": true,
+    "enable_profiling": false,
+    "profile_memory": false,
+    "benchmark_mode": false
+  },
+  "threading": {
+    "enable_safety": true,
+    "max_threads": 8,
+    "enable_parallel_mc": true,
+    "thread_pool_size": 4
+  },
+  "memory": {
+    "enable_profiling": false,
+    "max_usage_mb": 1024,
+    "enable_leak_detection": false,
+    "gc_frequency": 1000
+  },
+  "exotic": {
+    "barrier_monitoring_frequency": 1.0,
+    "use_control_variates": false,
+    "asian_averaging_points": 252,
+    "digital_smoothing": 0.01,
+    "lookback_monitoring_frequency": 1.0,
+    "rainbow_correlation_threshold": 0.99
+  },
+  "risk": {
+    "var_confidence_95": 0.95,
+    "var_confidence_99": 0.99,
+    "enable_stress_testing": true,
+    "max_position_size": 1000000.0
+  },
+  "market": {
+    "default_risk_free_rate": 0.05,
+    "default_dividend_yield": 0.0,
+    "default_volatility": 0.2,
+    "correlation_decay_factor": 0.95
+  },
+  "validation": {
+    "enable_parameter_checks": true,
+    "warn_extreme_values": true,
+    "max_volatility": 5.0,
+    "max_time_to_expiry": 30.0,
+    "min_barrier_distance": 0.01
+  }
+}
